@@ -28,8 +28,8 @@ Res.DFc<-Res.DF %>% group_by(Titre) %>% mutate(text.yc = rev(text.y)) # it is ne
 
 #Write these files for checking
 #Check the data if necessary
-write.table(Res.DFc, "clipboard", sep="\t", col.names=T, row.names=F) 
-write.csv(Res.DFc, "Res.DF_plot.csv", row.names=F) 
+#write.table(Res.DFc, "clipboard", sep="\t", col.names=T, row.names=F) 
+#write.csv(Res.DFc, "Res.DF_plot.csv", row.names=F) 
 
 g_ghisc<-ggplot(Res.DFc, aes(Titre, fill = as.factor(Assay_number), group = nn))+
   scale_x_continuous(trans = 'log2', limits = c(1, 256), breaks = c(1,2,4,8,16,32,64,128, 256), 
